@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/API/" />
+  <Folder Name="/API/Authentication/">
+    <Project Path="AuthenticationService/AuthenticationService.csproj" Id="ce86343b-ee17-48a4-a212-4dcb8d595528" />
+  </Folder>
+  <Folder Name="/API/Gateway/" />
+  <Folder Name="/Common/" />
+  <Folder Name="/Services/" />
+</Solution>
