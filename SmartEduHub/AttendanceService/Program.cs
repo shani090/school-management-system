@@ -1,10 +1,10 @@
-using AuthenticationService.Models;
+using AttendanceService.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<AuthDbContext>(options =>
+builder.Services.AddDbContext<AttendanceDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

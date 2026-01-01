@@ -1,0 +1,1 @@
+dotnet ef dbcontext scaffold "Server=LAPTOP-GA1QF34B;Database=SmartEduHubDB;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context AttendanceDbContext --table Colleges --table Students --table Attendance --force

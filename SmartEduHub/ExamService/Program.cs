@@ -1,10 +1,9 @@
-using AuthenticationService.Models;
+using ExamService.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddDbContext<AuthDbContext>(options =>
+builder.Services.AddDbContext<ExamDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
