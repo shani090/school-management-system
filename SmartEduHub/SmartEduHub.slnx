@@ -4,6 +4,15 @@
     <Project Path="AuthenticationService/AuthenticationService.csproj" Id="ce86343b-ee17-48a4-a212-4dcb8d595528" />
   </Folder>
   <Folder Name="/API/Gateway/" />
+  <Folder Name="/API/UI/" />
   <Folder Name="/Common/" />
-  <Folder Name="/Services/" />
+  <Folder Name="/Services/">
+    <Project Path="AttendanceService/AttendanceService.csproj" Id="baf52000-26f7-481a-9967-e21be0372f33" />
+    <Project Path="ExamService/ExamService.csproj" Id="ea94c418-2e2a-47f4-a63b-5f867a02152a" />
+    <Project Path="StudentService/StudentService.csproj" Id="561ac19b-850d-40fc-a285-91553e5ddf6d" />
+    <Project Path="TeacherService/TeacherService.csproj" Id="8be25459-15e1-4ce0-add7-0a4893fc102e" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="Readme.Md" />
+  </Folder>
 </Solution>
