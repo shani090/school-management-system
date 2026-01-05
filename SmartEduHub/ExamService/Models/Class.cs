@@ -19,5 +19,7 @@ public partial class Class
 
     public virtual ICollection<Exam> Exams { get; set; } = new List<Exam>();
 
+    public virtual ICollection<Student> Students { get; set; } = new List<Student>();
+
     public virtual ICollection<Subject> Subjects { get; set; } = new List<Subject>();
 }

@@ -1,49 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using StudentService.Models;
 
-namespace AttendanceService.Models;
+namespace StudentService.Data;
 
-public partial class AttendanceDbContext : DbContext
+public partial class StudentDbContext : DbContext
 {
-    public AttendanceDbContext()
+    public StudentDbContext()
     {
     }
 
-    public AttendanceDbContext(DbContextOptions<AttendanceDbContext> options)
+    public StudentDbContext(DbContextOptions<StudentDbContext> options)
         : base(options)
     {
     }
-
-    public virtual DbSet<Attendance> Attendances { get; set; }
 
     public virtual DbSet<College> Colleges { get; set; }
 
     public virtual DbSet<Student> Students { get; set; }
 
-   
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Attendance>(entity =>
-        {
-            entity.HasKey(e => e.AttendanceId).HasName("PK__Attendan__8B69261C9026876C");
-
-            entity.ToTable("Attendance");
-
-            entity.Property(e => e.Remarks).HasMaxLength(200);
-            entity.Property(e => e.Status).HasMaxLength(20);
-
-            entity.HasOne(d => d.College).WithMany(p => p.Attendances)
-                .HasForeignKey(d => d.CollegeId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Attendanc__Colle__6754599E");
-
-            entity.HasOne(d => d.Student).WithMany(p => p.Attendances)
-                .HasForeignKey(d => d.StudentId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Attendanc__Stude__68487DD7");
-        });
-
         modelBuilder.Entity<College>(entity =>
         {
             entity.HasKey(e => e.CollegeId).HasName("PK__Colleges__29409539FB888BDB");

@@ -25,5 +25,7 @@ public partial class College
 
     public virtual ICollection<Result> Results { get; set; } = new List<Result>();
 
+    public virtual ICollection<Student> Students { get; set; } = new List<Student>();
+
     public virtual ICollection<Subject> Subjects { get; set; } = new List<Subject>();
 }
