@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace TeacherService.Models;
+
+public partial class Subject
+{
+    public int SubjectId { get; set; }
+
+    public int CollegeId { get; set; }
+
+    public string SubjectName { get; set; } = null!;
+
+    public int ClassId { get; set; }
+
+    public virtual College College { get; set; } = null!;
+
+    public virtual ICollection<Teacher> Teachers { get; set; } = new List<Teacher>();
+}

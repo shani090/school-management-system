@@ -1,1 +1,4 @@
-Scaffold-DbContext "Name=ConnectionStrings:Default" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context TeacherDbContext -Tables "Colleges","Subjects","Teachers" -Force
+dotnet ef dbcontext scaffold "Name=ConnectionStrings:Default" Microsoft.EntityFrameworkCore.SqlServer `--output-dir Models ` --context-dir Data `--context TeacherDbContext `--tables Colleges,Subjects,Teachers `--force
+
+
+cd "D:\school-management-system\SmartEduHub\TeacherService"

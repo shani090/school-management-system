@@ -1,1 +1,3 @@
-dotnet ef dbcontext scaffold "Server=LAPTOP-GA1QF34B;Database=SmartEduHubDB;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context AttendanceDbContext --table Colleges --table Students --table Attendance --force
+dotnet ef dbcontext scaffold "Name=ConnectionStrings:Default" Microsoft.EntityFrameworkCore.SqlServer ` --output-dir Models ` --context-dir Data ` --context AttendanceDbContext ` --table Colleges --table Students --table Attendance --force
+
+cd "D:\school-management-system\SmartEduHub\AttendanceService"

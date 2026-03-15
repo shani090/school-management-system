@@ -22,4 +22,6 @@ public partial class Result
     public virtual College College { get; set; } = null!;
 
     public virtual Exam Exam { get; set; } = null!;
+
+    public virtual Student Student { get; set; } = null!;
 }

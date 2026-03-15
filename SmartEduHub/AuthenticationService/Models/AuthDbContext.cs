@@ -18,6 +18,7 @@ public partial class AuthDbContext : DbContext
     public virtual DbSet<College> Colleges { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
+    public virtual DbSet<RefreshToken> RefreshTokens { get; set; }
 
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
